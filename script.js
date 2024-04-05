@@ -1,4 +1,7 @@
 const cardsContainer = document.getElementById('cards-container')
+const gameOver = document.getElementById('game-over')
+const remaningPlays = document.getElementById('remaning-plays')
+const points = document.getElementById('points')
 
 const icons = [
     'Ship-1.png',
@@ -33,8 +36,18 @@ const icons = [
     'Wave.png',
 ]
 
+let plays = 10
+let currentPoints = 0
+
 const revelCard = ({ target }) => {
-    target.parentNode.classList.add('reveal-card')   
+    if (plays >= 1) {
+        target.parentNode.classList.add('reveal-card')
+        plays -= 1
+    } else {
+        gameOver.classList.remove('hide')
+    }
+
+    remaningPlays.innerText = plays
 }
 
 const newCard = (frontImg) => {

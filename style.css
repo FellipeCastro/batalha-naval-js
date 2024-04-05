@@ -11,8 +11,21 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 20px;
+    padding: 50px;
     background-color: #eee;
+}
+
+.header-container {
+    width: 100%;
+    max-width: 620px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.title h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
 }
 
 .cards-container {
@@ -23,7 +36,7 @@ body {
     max-width: 620px;
     padding: 10px;
     border-radius: 5px;
-    border: 2px solid black;
+    border: 2px solid #000;
     background-color: #fff;
 }
 
@@ -33,6 +46,7 @@ body {
     position: relative;
     transition: all .4s ease;
     transform-style: preserve-3d;
+    cursor: pointer;
 }
 
 .face {
@@ -56,4 +70,16 @@ body {
 
 .reveal-card {
     transform: rotateY(180deg);
+}
+
+.game-over {
+    font-size: 2em;
+    color: #ff0000;
+    transition: .5s;
+    margin-bottom: 10px;
+}
+
+.hide {
+    opacity: 0;
+    pointer-events: none;
 }
