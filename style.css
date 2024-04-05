@@ -46,7 +46,6 @@ body {
 }
 
 .front {
-    background-image: url('img/Wave.png');
     transform: rotateY(180deg);
 }
 
@@ -55,6 +54,6 @@ body {
     backface-visibility: hidden;
 }
 
-.card:hover {
+.reveal-card {
     transform: rotateY(180deg);
 }
