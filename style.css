@@ -13,6 +13,7 @@ body {
     align-items: center;
     padding: 30px;
     background-color: #eee;
+    position: relative;
 }
 
 .header-container {
@@ -36,7 +37,7 @@ body {
     max-width: 620px;
     padding: 10px;
     border-radius: 5px;
-    border: 2px solid #000;
+    border: 3px solid #000;
     background-color: #fff;
 }
 
@@ -77,6 +78,20 @@ body {
     color: #ff0000;
     transition: .5s;
     margin-bottom: 10px;
+}
+
+.reload-btn {
+    background-color: transparent;
+    padding: .5em;
+    border: 3px solid #000;
+    border-radius: 50%;
+    color: #000;
+    font-size: 1.5em;
+    cursor: pointer;
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    transition: .5s;
 }
 
 .hide {

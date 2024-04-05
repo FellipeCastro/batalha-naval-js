@@ -2,6 +2,7 @@ const cardsContainer = document.getElementById('cards-container')
 const gameOver = document.getElementById('game-over')
 const remaningPlays = document.getElementById('remaning-plays')
 const points = document.getElementById('points')
+const reloadBtn = document.getElementById('reload-btn')
 
 const icons = [
     'Ship-1.png',
@@ -34,28 +35,31 @@ const icons = [
 let plays = 10
 let currentPoints = 0
 
+reloadBtn.addEventListener('click', () => {
+    location.reload()
+})
+
 const revelCard = ({ target }) => {
     if (plays >= 1) {
+        const frontImg = target.parentNode.querySelector('.front').style.backgroundImage
         target.parentNode.classList.add('reveal-card')
 
-        const imageUrl = target.style.backgroundImage.slice()
-
-        if (imageUrl.includes('Ship-1.png')) {
+        if (frontImg.includes('Ship-1.png')) {
             currentPoints += 1
-        } else if (imageUrl.includes('Ship-2.png')) {
+        } else if (frontImg.includes('Ship-2.png')) {
             currentPoints += 2
-        } else if (imageUrl.includes('Ship-3.png')) {
+        } else if (frontImg.includes('Ship-3.png')) {
             currentPoints += 3
         }
 
         plays -= 1
     } else {
         gameOver.classList.remove('hide')
+        reloadBtn.classList.remove('hide')
     }
 
     remaningPlays.innerText = plays
     points.innerText = currentPoints
-    console.log(currentPoints)
 }
 
 const newCard = (frontImg) => {
