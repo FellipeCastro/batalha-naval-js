@@ -29,11 +29,6 @@ const icons = [
     'Wave.png',
     'Wave.png',
     'Wave.png',
-    'Wave.png',
-    'Wave.png',
-    'Wave.png',
-    'Wave.png',
-    'Wave.png',
 ]
 
 let plays = 10
@@ -42,12 +37,25 @@ let currentPoints = 0
 const revelCard = ({ target }) => {
     if (plays >= 1) {
         target.parentNode.classList.add('reveal-card')
+
+        const imageUrl = target.style.backgroundImage.slice()
+
+        if (imageUrl.includes('Ship-1.png')) {
+            currentPoints += 1
+        } else if (imageUrl.includes('Ship-2.png')) {
+            currentPoints += 2
+        } else if (imageUrl.includes('Ship-3.png')) {
+            currentPoints += 3
+        }
+
         plays -= 1
     } else {
         gameOver.classList.remove('hide')
     }
 
     remaningPlays.innerText = plays
+    points.innerText = currentPoints
+    console.log(currentPoints)
 }
 
 const newCard = (frontImg) => {
