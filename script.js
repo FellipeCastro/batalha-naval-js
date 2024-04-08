@@ -1,5 +1,5 @@
 const cardsContainer = document.getElementById('cards-container')
-const gameOver = document.getElementById('game-over')
+const gameEnd = document.getElementById('game-end')
 const remaningPlays = document.getElementById('remaning-plays')
 const points = document.getElementById('points')
 const reloadBtn = document.getElementById('reload-btn')
@@ -32,7 +32,7 @@ const icons = [
     'Wave.png',
 ]
 
-let plays = 10
+let plays = 12
 let currentPoints = 0
 
 reloadBtn.addEventListener('click', () => {
@@ -55,8 +55,15 @@ const revelCard = ({ target }) => {
 
             plays -= 1            
         }
-    } else {
-        gameOver.classList.remove('hide')
+    } else if (currentPoints == 1200) {
+        gameEnd.innerText = 'Você derrubou todos os navios, parabéns!'
+        gameEnd.classList.add('game-winner')
+        gameEnd.classList.remove('hide')
+        reloadBtn.classList.remove('hide')
+    }else {
+        gameEnd.innerText = 'Game over'
+        gameEnd.classList.add('game-over')
+        gameEnd.classList.remove('hide')
         reloadBtn.classList.remove('hide')
     }
 

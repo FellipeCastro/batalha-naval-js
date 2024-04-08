@@ -22,6 +22,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-bottom: 20px;
 }
 
 .title h1 {
@@ -77,7 +78,14 @@ body {
     font-size: 2.5em;
     color: #ff0000;
     transition: .5s;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.game-winner {
+    font-size: 2em;
+    color: green;
+    transition: .5s;
+    margin-bottom: 20px;
 }
 
 .reload-btn {
@@ -94,7 +102,7 @@ body {
     transition: .5s;
 }
 
-.description-cards {
+.pontuation-container {
     width: 100%;
     max-width: 620px;
     display: flex;
@@ -104,19 +112,19 @@ body {
     margin-top: 50px;
 }
 
-.description-cards h2 {
+.pontuation-container h2 {
     font-size: 2em;
     margin-bottom: 20px;
 }
 
-.description-cards-container {
+.pontuation-cards-container {
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-around;
 }
 
-.description-card {
+.pontuation-card {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -124,7 +132,7 @@ body {
     gap: .5em;
 }
 
-.description-card img {
+.pontuation-card img {
     height: 90px;
 }
 
