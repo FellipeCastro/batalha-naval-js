@@ -41,18 +41,20 @@ reloadBtn.addEventListener('click', () => {
 
 const revelCard = ({ target }) => {
     if (plays >= 1) {
-        const frontImg = target.parentNode.querySelector('.front').style.backgroundImage
-        target.parentNode.classList.add('reveal-card')
+        if (!target.parentNode.classList.contains('reveal-card')) {
+            const frontImg = target.parentNode.querySelector('.front').style.backgroundImage
+            target.parentNode.classList.add('reveal-card')
 
-        if (frontImg.includes('Ship-1.png')) {
-            currentPoints += 1
-        } else if (frontImg.includes('Ship-2.png')) {
-            currentPoints += 2
-        } else if (frontImg.includes('Ship-3.png')) {
-            currentPoints += 3
+            if (frontImg.includes('Ship-1.png')) {
+                currentPoints += 1
+            } else if (frontImg.includes('Ship-2.png')) {
+                currentPoints += 2
+            } else if (frontImg.includes('Ship-3.png')) {
+                currentPoints += 3
+            }
+
+            plays -= 1            
         }
-
-        plays -= 1
     } else {
         gameOver.classList.remove('hide')
         reloadBtn.classList.remove('hide')
