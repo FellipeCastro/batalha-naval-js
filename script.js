@@ -46,11 +46,11 @@ const revelCard = ({ target }) => {
             target.parentNode.classList.add('reveal-card')
 
             if (frontImg.includes('Ship-1.png')) {
-                currentPoints += 1
+                currentPoints += 50
             } else if (frontImg.includes('Ship-2.png')) {
-                currentPoints += 2
+                currentPoints += 100
             } else if (frontImg.includes('Ship-3.png')) {
-                currentPoints += 3
+                currentPoints += 150
             }
 
             plays -= 1            

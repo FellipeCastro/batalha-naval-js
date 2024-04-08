@@ -94,6 +94,40 @@ body {
     transition: .5s;
 }
 
+.description-cards {
+    width: 100%;
+    max-width: 620px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.description-cards h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.description-cards-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.description-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: .5em;
+}
+
+.description-card img {
+    height: 90px;
+}
+
 .hide {
     opacity: 0;
     pointer-events: none;
