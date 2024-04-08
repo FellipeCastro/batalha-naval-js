@@ -4,6 +4,9 @@ const remaningPlays = document.getElementById('remaning-plays')
 const points = document.getElementById('points')
 const reloadBtn = document.getElementById('reload-btn')
 
+let plays = 12
+let currentPoints = 0
+
 const icons = [
     'Ship-1.png',
     'Ship-2.png',
@@ -32,15 +35,12 @@ const icons = [
     'Wave.png',
 ]
 
-let plays = 12
-let currentPoints = 0
-
 reloadBtn.addEventListener('click', () => {
     location.reload()
 })
 
 const revelCard = ({ target }) => {
-    if (plays >= 1) {
+    if (plays > 0) {
         if (!target.parentNode.classList.contains('reveal-card')) {
             const frontImg = target.parentNode.querySelector('.front').style.backgroundImage
             target.parentNode.classList.add('reveal-card')
