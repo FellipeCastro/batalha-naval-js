@@ -90,7 +90,7 @@ const revelCard = ({ target }) => {
 }
 
 const newCard = (frontImg) => {
-    const card  =document.createElement('div')
+    const card = document.createElement('div')
     card.className = 'card'
 
     const front = document.createElement('div')
