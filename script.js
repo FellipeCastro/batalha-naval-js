@@ -34,7 +34,7 @@ const icons = [
     'Wave.png',
     'Wave.png',
     'Wave.png',
-    'Wave.png',
+    'Wave.png', 
 ]
 
 reloadBtn.addEventListener('click', () => {
@@ -62,12 +62,12 @@ const revelCard = ({ target }) => {
             } else if (frontImg.includes('Ship-2.png')) {
                 currentPoints += 100
                 addFlashMsg(100)
-            } else if (frontImg.includes('Ship-3.png')) {
+            } else if (frontImg.includes('Sh ip-3.png')) {
                 currentPoints += 150
                 addFlashMsg(150)
             }
 
-            plays -= 1        
+            plays -= 1
         }
     } else if (currentPoints == 1200) {
         gameEnd.innerText = 'Você derrubou todos os navios, parabéns!'
