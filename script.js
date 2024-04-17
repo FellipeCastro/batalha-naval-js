@@ -76,7 +76,7 @@ const revelCard = ({ target }) => {
         reloadBtn.classList.remove('hide')
         finalPointsMsg.innerText = `Você fez ${currentPoints} pontos`
         finalPointsMsg.classList.remove('hide')
-    }else {
+    } else {
         gameEnd.innerText = 'Game over'
         gameEnd.classList.add('game-over')
         gameEnd.classList.remove('hide')
